@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <header>
+<header>
       <div class="container container_header">
         <ul> <!-- opções header -->
           <li>
-            <a href="menu.html">Principal</a>
+            <img href="menu.html "src="img/zebra icon.png" alt="">
           </li>
           <li>
             <a href="cadastrar.php">Cadastrar</a>

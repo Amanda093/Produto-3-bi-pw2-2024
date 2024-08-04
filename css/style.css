@@ -1,7 +1,7 @@
 /*VARIAVEL DE COR & FONTE*/
 :root {
     --white: #ffffff;
-    --light-gray: #655485;
+    --light-gray: #aca7a7;
 }
 * {
     margin: 0;
@@ -29,14 +29,14 @@ header {
    z-index: 1;
 }
 .container_header {
-    padding-block: 2.5rem;
+    padding-block: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
 }
 header img {
-  height: 5rem;
+  height: 4rem;
 }
 ul {
     list-style: none;
@@ -66,4 +66,9 @@ ul a::after {
 ul a:hover::after {
     transform: scaleX(1);
     transform-origin: center;
+}
+button {
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
 }

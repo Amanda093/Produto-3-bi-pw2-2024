@@ -16,15 +16,15 @@
         <form name="cliente" method="POST" action="">
             <fieldset id="a">
                 <legend><b> Dados do Produto </b></legend>
-                <p> Nome: <input name="txtnome" type="text" size="40" maxlength="40" placeholder="Nome do Produto"></p>
-                <p> Estoque: <input name="txtestoq" type="text" size="10" placeholder="0"></p>
+                <p> Nome: <input name="txtnome" type="text" size="40" maxlength="40"></p>
+                <p> Estoque: <input name="txtestoq" type="number" size="10" placeholder="0"></p>
             </fieldset>
             <br>
             <fieldset id="b">
                 <legend><b> Opções </b></legend>
                 <br>
-                <input name="btnEnviar" type="submit" value="Cadastrar">
-                <input name="limpar" type="reset" value="Limpar">
+                <button name="btnEnviar" type="submit">Cadastrar</button>
+                <button name="limpar" type="reset">Limpar</button>
             </fieldset>
         </form>
 
@@ -36,7 +36,7 @@
             $pro = new Produto();
             $pro -> setNome($txtnome);
             $pro -> setEstoque($txtestoq);
-            echo "<h3><br><br>" . $pro -> salvar() . "</h3>";
+            echo $pro -> salvar();
         }
         ?>
     </section>

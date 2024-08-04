@@ -1,3 +1,8 @@
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</head>
 <?php
 
 include_once 'conectar.php';
@@ -54,11 +59,39 @@ class Produto
             // PDO::PARAM_STR representa o tipo de dados SQL CHAR, VARCHAR ou outra String. 
             if($sql -> execute() == 1)
             {
-                return "Registro salvo com sucesso!";
+                return '
+                <script type="text/javascript">
+                $(document).ready(function(){
+                    Swal.fire ({
+                    title: "Registrado com sucesso!",
+                    
+                    imageUrl: "img/zebra correndo.gif",
+                    imageWidth: 200,
+                    imageAlt: "Peixe colorido"
+                    })
+                  });
+                </script>';
             }
             $this -> conn = null;
         } catch(PDOException $exc) {
-            echo "Erro ao salvar o registo" . $exc -> getMessage();
+            return '
+            <script type="text/javascript">
+            $(document).ready(function(){
+                Swal.fire ({
+                title: "Houve um erro ao registrar!",
+                footer: "'. $exc -> getMessage() . '",
+                
+                confirmButtonColor: " #1f945d",
+                color: "#201b2c",
+
+                imageUrl: "img/zebra correndo.gif",
+                imageWidth: 200,
+                imageAlt: "Peixe colorido",
+
+                background: "#100d16",
+                })
+              });
+            </script>';
         }
     }
 
@@ -66,7 +99,7 @@ class Produto
     {
         try {
             $this -> conn = new Conectar();
-            $sql = $this -> conn -> query("select * from produto order by nome");
+            $sql = $this -> conn -> query("select * from produto order by id");
             $sql -> execute();
             return $sql -> fetchAll();
             $this -> conn = null;

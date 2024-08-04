@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/produto.png" />
-    <title>Home Page</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
       <div class="container container_header">
         <ul> <!-- opções header -->
           <li>
-            <img href="menu.html "src="img/zebra icon.png" alt="">
+            <a href="menu.html">Principal</a>
           </li>
           <li>
-            <a href="cadastrar.php">Cadastrar</a>
+            <a href="menu.html">Cadastrar</a>
           </li>
           <li>
             <a href="menu.html">Excluir</a>
@@ -32,5 +33,6 @@
         </ul>
       </div>
     </header>
-  </body>
+</body>
+
 </html>
