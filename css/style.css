@@ -1,12 +1,17 @@
 /*VARIAVEL DE COR & FONTE*/
 :root {
     --white: #ffffff;
-    --light-gray: #aca7a7;
+    --light-gray: #857676;
 }
 * {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+button {
+    background-color: #857676;
+    color: var(--white);
+    font-size: 1rem;
 }
 .container, 
 section {
@@ -22,8 +27,8 @@ body {
     flex-direction: column;
     gap: 2rem;
 }
-/* HEADER */
 header {
+    /* HEADER */
    width: 100%;
    background-color: var(--light-gray);
    z-index: 1;

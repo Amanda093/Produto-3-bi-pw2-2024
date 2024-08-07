@@ -16,8 +16,8 @@
         <form name="cliente" method="POST" action="">
             <fieldset id="a">
                 <legend><b> Dados do Produto </b></legend>
-                <p> Nome: <input name="txtnome" type="text" size="40" maxlength="40"></p>
-                <p> Estoque: <input name="txtestoq" type="number" size="10" placeholder="0"></p>
+                <p> Nome: <input name="txtnome" type="text" size="40" maxlength="40" required></p>
+                <p> Estoque: <input name="txtestoq" type="number" size="10" placeholder="0" required></p>
             </fieldset>
             <br>
             <fieldset id="b">
