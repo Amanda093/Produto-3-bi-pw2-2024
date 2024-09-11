@@ -13,7 +13,7 @@
     <?php include_once 'layouts/navbar.php' ?>
 
     <section>
-        <center><ont face = "Century Gothic" size = "6"><b> Exclusão de Produtos Cadastrados<b/><font size ="4">
+        <center><font face = "Century Gothic" size = "6"><b> Exclusão de Produtos Cadastrados<b><font size ="4">
 
         <font face = "Century Gothic" size = "3"><b>
         
