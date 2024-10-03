@@ -95,7 +95,6 @@ class Produto {
         }
     }
 
-    /*
     function alterar() 
     {
         try {
@@ -125,15 +124,14 @@ class Produto {
             echo "Erro ao salvar o registro. " . $exc -> getMessage();
         }
     }
-    */
 
     function consultar() 
     {
         try {
             $this -> conn = new Conectar();
+            $query = "%" . $this -> getNome() . "%";
             $sql = $this -> conn -> prepare("select * from produto where nome = ?"); // informei o ? (parametro)
-            @$sql ->  bindParam(1, $this -> getNome(), PDO::PARAM_STR); // inclui esta linha para definir o parametro
-            // @$sql -> bindParam(1, $this -> getNome() . "%", PDO::PARAM_STR);
+            @$sql ->  bindParam(1, $query, PDO::PARAM_STR); // inclui esta linha para definir o parametro
             $sql -> execute();
             return $sql -> fetchAll();
             $this -> conn = null;

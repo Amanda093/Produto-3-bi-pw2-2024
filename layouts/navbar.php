@@ -11,16 +11,16 @@
         <a href="cadastrar.php">Cadastrar</a>
       </li>
       <li>
-        <a href="menu.html">Excluir</a>
+        <a href="excluir.php">Excluir</a>
       </li>
       <li>
-        <a href="menu.html">Pesquisar</a>
+        <a href="consultar.php">Pesquisar</a>
       </li>
       <li>
         <a href="listar.php">Listar</a>
       </li>
       <li>
-        <a href="menu.html">Alterar</a>
+        <a href="alterar1.php">Alterar</a>
       </li>
     </ul>
   </div>

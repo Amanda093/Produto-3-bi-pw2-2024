@@ -13,14 +13,14 @@
     <?php include_once 'layouts/navbar.php' ?>
 
     <section>
-        <center><font face="Century Gothic" size="6"><b>Consulta de Produtos Cadastrados</b></font></center>
+        <h2>Consulta de Produtos Cadastrados</h2> 
 
         <form name="cliente" method="POST" action="">
             <fieldset id="a">
                 <legend><b>Informe o Nome do produto desejado: </b></legend>
                 <p> Nome: <input name="txtnome" type="text" size="40" maxlenght="40" placeholder="Nome do produto" required></p>
                 <button name="btnEnviar" type="submit">Cadastrar</button>
-                <button name="limpar" type="reset">Limpar</button>
+                <button name="btnLimpar" type="reset">Limpar</button>
             </fieldset>
 
             <fieldset id="b">

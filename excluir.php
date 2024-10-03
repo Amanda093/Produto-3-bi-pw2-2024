@@ -13,21 +13,15 @@
     <?php include_once 'layouts/navbar.php' ?>
 
     <section>
-        <center><font face = "Century Gothic" size = "6"><b> Exclusão de Produtos Cadastrados<b><font size ="4">
-
-        <font face = "Century Gothic" size = "3"><b>
-        
-        </b></center>
+        <h2>Exclusão de Produtos Cadastrados</h2> 
         <br>
-        <font size = "4">
-        
         <form name = "cliente" method = "POST" action = "">
             <fieldset id="a">
                 <legend><b> Informe o ID do produto desejado: </b></legend>
                 <p> ID <input name = "txtid" type = "text" size = "20" maxlength = "5" placeholder = "TODO">
                 <br><br><center>
-                <button name = "btnEnviar" value = "Excluir">
-                <button name = "btnLimpar" value = "Limpar">
+                <button name = "btnEnviar" type="submit">Excluir</button>
+                <button name = "btnLimpar" type="reset">Limpar</button>
             </fieldset>
         
             <fieldset id="b">
