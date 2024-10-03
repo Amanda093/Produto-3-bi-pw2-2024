@@ -33,7 +33,7 @@
         if(isset($btnEnviar)) {
             include_once 'Produto.php';
             $p = new Produto();
-            $p -> setNome($txtnome . '%'); // o . '%' serve para uma busca aproximada da determinada letra informada
+            $p -> setNome($txtnome); // o . '%' serve para uma busca aproximada da determinada letra informada
             $pro_bd = $p -> consultar();
             foreach ($pro_bd as $pro_mostrar) {
                 ?> <br>

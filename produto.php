@@ -129,8 +129,9 @@ class Produto {
     {
         try {
             $this -> conn = new Conectar();
-            $query = "%" . $this -> getNome() . "%";
-            $sql = $this -> conn -> prepare("select * from produto where nome = ?"); // informei o ? (parametro)
+            $query = $this -> getNome() ;
+            $query = "%" . $query . "%";
+            $sql = $this -> conn -> prepare("select * from produto where nome like ?"); // informei o ? (parametro)
             @$sql ->  bindParam(1, $query, PDO::PARAM_STR); // inclui esta linha para definir o parametro
             $sql -> execute();
             return $sql -> fetchAll();
@@ -144,7 +145,7 @@ class Produto {
     {
         try {
             $this -> conn = new Conectar();
-            $sql = $this -> conn -> prepare("delete * from produto where id = ?"); // informei o ? (parametro)
+            $sql = $this -> conn -> prepare("delete from produto where id = ?"); // informei o ? (parametro)
             @$sql ->  bindParam(1, $this -> getId(), PDO::PARAM_STR); // inclui esta linha para definir o parametro
             if($sql -> execute() == 1) {
                 return "Excluido com sucesso! ";
