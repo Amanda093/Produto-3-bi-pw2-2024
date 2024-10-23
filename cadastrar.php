@@ -14,20 +14,22 @@
 
     <section>
         <form name="cliente" method="POST" action="">
-            <fieldset id="a">
-                <legend><b> Dados do Produto </b></legend>
-                <p> Nome: <input name="txtnome" type="text" size="40" maxlength="40" required></p>
-                <p> Estoque: <input name="txtestoq" type="number" size="10" placeholder="0" required></p>
-            </fieldset>
+            <h2 class="title"> Dados do Produto </h2>
             <br>
-            <fieldset id="b">
-                <legend><b> Opções </b></legend>
-                <br>
+            <div class="row">
+                <label for="">Nome</label>
+                <input name="txtnome" type="text" size="40" maxlength="40" required>
+            </div>
+            <div class="row">
+                <label for="">Estoque</label>
+                <input name="txtestoq" type="number" size="10" placeholder="0" required>
+            </div>
+            <div class="row">
                 <button name="btnEnviar" type="submit">Cadastrar</button>
-                <button name="limpar" type="reset">Limpar</button>
-            </fieldset>
+                <button name="btnLimpar" type="reset">Limpar</button>
+            </div>
         </form>
-
+    </section>
         <?php
         extract($_POST, EXTR_OVERWRITE);
         if(isset($btnEnviar))
@@ -39,7 +41,6 @@
             echo $pro -> salvar();
         }
         ?>
-    </section>
 </body>
 
 </html>

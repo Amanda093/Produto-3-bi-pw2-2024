@@ -1,18 +1,14 @@
 /*VARIAVEL DE COR & FONTE*/
 :root {
     --white: #ffffff;
-    --light-gray: #857676;
+    --gray: #39393b;
 }
 * {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-button {
-    background-color: #857676;
-    color: var(--white);
-    font-size: 1rem;
-}
+
 .container, 
 section {
     /* DELIMITAÇÃO */
@@ -20,7 +16,7 @@ section {
     margin-inline: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    /* outline: solid 2px red; */
+    outline: solid 2px red;
 }
 body {
     display: flex;
@@ -30,7 +26,7 @@ body {
 header {
     /* HEADER */
    width: 100%;
-   background-color: var(--light-gray);
+   background-color: var(--gray);
    z-index: 1;
 }
 .container_header {
@@ -40,6 +36,8 @@ header {
     align-items: center;
     font-size: 1.5rem;
 }
+
+/* Começo do Header */
 header img {
   height: 4rem;
 }
@@ -72,8 +70,41 @@ ul a:hover::after {
     transform: scaleX(1);
     transform-origin: center;
 }
+/* Fim do Header */
+section {
+    width: 70vw;
+    height: fit-content;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
 button {
+    padding-inline: 0.1em;
+    padding-block: 0.2em;
+    width: 100%;
+
+    background-color: var(--gray);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--white);
+
+    border-radius: 5px;
     border: none;
-    padding: 0.5rem;
+    outline: none;
     cursor: pointer;
+    font-size: 1rem;
+}
+input, select {
+    background-color: var(--light-light-light-gray);
+    border: solid 2px var(--purple);
+    border-radius: 0.7em;
+    padding: 0.4rem 0.75rem;
+
+    box-shadow: 0px 10px 40px -12px #00ff0052;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    &:hover {
+        background-color: var(--white);
+        box-shadow: 5px 10px 20px -10px #00ff55a9;
+    }
 }

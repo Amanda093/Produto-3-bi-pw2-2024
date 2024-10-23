@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11/05/2024 às 00:26
+-- Tempo de geração: 23/10/2024 às 14:10
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -44,6 +44,25 @@ INSERT INTO `produto` (`id`, `nome`, `estoque`) VALUES
 (3, 'borracha', 25),
 (4, 'caneta azul', 3),
 (5, 'caneta vermelha', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `login` varchar(8) NOT NULL,
+  `senha` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `usuario`
+--
+
+INSERT INTO `usuario` (`login`, `senha`) VALUES
+('a', 123),
+('b', 456);
 
 --
 -- Índices para tabelas despejadas
