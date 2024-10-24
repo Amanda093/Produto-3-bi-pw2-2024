@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/produto.png" />
     <title>Login</title>
+
+    <script language=javascript>
+            function blokletras(keypress)
+            {
+                // campo senha - bloqueia letras
+                if(keypress >= 48 && keypress <= 57) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+    </script>
 </head>
 
 <body>
@@ -19,7 +32,7 @@
             </div>
             <div class="row">
                 <label for="">Senha</label>
-                <input name="txtsenha" type="password" maxlength="3" required>
+                <input name="txtsenha" type="password" maxlength="3"  onkeypress="return blokletras(window.event.keyCode)" required>
             </div>
             <div class="row">
                 <button name = "btnEnviar" type="submit">Entrar</button>
