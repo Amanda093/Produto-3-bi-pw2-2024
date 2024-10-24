@@ -12,13 +12,22 @@
 <body>
     <?php include_once 'layouts/navbar.php' ?>
 
+    <?php
+        include_once 'Produto.php';
+        $p = new Produto();
+        $pro_bd = $p -> listar();
+    ?>
     <section>
         <form name="cliente" method = "POST" action = "alterar2.php">
             <h2> Alteração do Produto Desejado </h2>
             <br>
             <div class="row">
                 <label for="">Id</label>
-                <input name="txtid" type="text" size="20" maxlength="5" placeholder="Id do Produto">
+                <select name="txtid" size="1">
+                        <?php foreach ($pro_bd as $pro_mostrar) {
+                            echo '<option value = "' . $pro_mostrar[0] . '">' . $pro_mostrar[0] . ' - ' . $pro_mostrar[1] .'</option>';
+                        } ?>
+                </select>
             </div>
             <div class="row">
                 <button name="btnEnviar" type="submit">Alterar</button>

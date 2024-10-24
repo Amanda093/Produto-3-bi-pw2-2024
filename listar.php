@@ -19,6 +19,7 @@
         $pro_bd = $p->listar();
         ?>
 
+        <table>
         <tr> <th> Id </th> <th> Nome </th> <th> Estoque </th> </tr>
     
             <?php
@@ -31,7 +32,7 @@
                 <?php
             }
             ?>
-            </table>
+        </table>
     </section>
 </body>
 
