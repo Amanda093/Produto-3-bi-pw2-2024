@@ -13,8 +13,8 @@
     <?php include_once 'layouts/navbar.php' ?>
 
     <section>
-        <h2> Informe o ID do produto desejado: </h2>
         <form name="cliente" method = "POST" action = "alterar2.php">
+            <h2> Alteração do Produto Desejado </h2>
             <br>
             <div class="row">
                 <label for="">Id</label>

@@ -124,3 +124,10 @@ input, select {
     align-items: center;
     gap: 8px;
 }
+table, th, td {
+    background-color: var(--gray);
+    border: 2px solid var(--gray);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 1.5rem;
+}

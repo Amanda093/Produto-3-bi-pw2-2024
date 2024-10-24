@@ -19,18 +19,19 @@
         $pro_bd = $p->listar();
         ?>
 
-        <b> Id &nbsp; &nbsp; &nbsp; &nbsp; Nome &nbsp; &nbsp; &nbsp; &nbsp;Estoque</b>
-
-        <?php
-        foreach ($pro_bd as $pro_mostrar) {
-            ?>
-            <br><br>
-            <b> <?php echo $pro_mostrar[0]; ?></b> &nbsp; &nbsp; &nbsp; &nbsp;
-            <?php echo $pro_mostrar[1]; ?> &nbsp;&nbsp;&nbsp;&nbsp;
-            <?php echo $pro_mostrar[2]; ?>
+        <tr> <th> Id </th> <th> Nome </th> <th> Estoque </th> </tr>
+    
             <?php
-        }
-        ?>
+            foreach ($pro_bd as $pro_mostrar) {
+                ?>
+                <br><br>
+                <tr> <th> <?php echo $pro_mostrar[0]; ?> </th>  </b> 
+                <td> <?php echo $pro_mostrar[1]; ?> </td>
+                <td> <?php echo $pro_mostrar[2]; ?> </td>
+                <?php
+            }
+            ?>
+            </table>
     </section>
 </body>
 
