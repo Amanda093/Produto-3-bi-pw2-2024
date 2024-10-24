@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section>
+    <section class="sessao">
         <h2>Login de acesso</h2> 
         <form name="cliente" method="POST" action="">
             <div class="row">

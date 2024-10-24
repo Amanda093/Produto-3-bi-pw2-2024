@@ -63,7 +63,7 @@ class Produto {
                 <script type="text/javascript">
                     $(document).ready(function() {
                     Swal.fire({
-                        title: "Seja bem vindo!",
+                        title: "Cadastrado com sucesso!",
                         confirmButtonColor: "#39393b",
                         color: "#201b2c",
                         
@@ -85,12 +85,12 @@ class Produto {
                 title: "Houve um erro ao registrar!",
                 footer: "'. $exc -> getMessage() . '",
                 
-                confirmButtonColor: " #1f945d",
+                confirmButtonColor: "#39393b",
                 color: "#201b2c",
 
                 imageUrl: "img/zebra correndo.gif",
                 imageWidth: 200,
-                imageAlt: "Peixe colorido",
+                imageAlt: "Zebra correndo",
 
                 background: "#100d16",
                 })

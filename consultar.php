@@ -12,7 +12,7 @@
 <body>
     <?php include_once 'layouts/navbar.php' ?>
 
-    <section>
+    <section class="sessao">
         <form name="cliente" method="POST" action="">
             <h2 class="title"> Consulta de Produtos </h2>
             <br>
@@ -27,7 +27,7 @@
         </form>
     </section>
 
-    <section>
+    <section class="sessao">
         <form action="">
             <h2>Resultado:</h2>
     <?php

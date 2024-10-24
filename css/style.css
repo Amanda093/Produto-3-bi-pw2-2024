@@ -29,8 +29,11 @@ section {
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-in-out;
-    
-    outline: solid 2px red;
+}
+.sessao {
+    outline: solid 4px var(--gray);
+    border-radius: 1rem;
+    margin-top: 5rem;
 }
 body {
     position:relative;

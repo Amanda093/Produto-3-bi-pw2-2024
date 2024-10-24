@@ -12,7 +12,7 @@
 <body>
     <?php include_once 'layouts/navbar.php' ?>
 
-    <section>
+    <section class="sessao">
         <form name="cliente" method="POST" action="">
             <h2 class="title"> Dados do Produto </h2>
             <br>

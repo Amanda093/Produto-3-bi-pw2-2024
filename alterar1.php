@@ -17,7 +17,7 @@
         $p = new Produto();
         $pro_bd = $p -> listar();
     ?>
-    <section>
+    <section class="sessao">
         <form name="cliente" method = "POST" action = "alterar2.php">
             <h2> Alteração do Produto Desejado </h2>
             <br>
