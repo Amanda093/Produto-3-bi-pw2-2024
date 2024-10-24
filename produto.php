@@ -61,15 +61,19 @@ class Produto {
             {
                 return '
                 <script type="text/javascript">
-                $(document).ready(function(){
-                    Swal.fire ({
-                    title: "Registrado com sucesso!",
-                    
-                    imageUrl: "img/zebra correndo.gif",
-                    imageWidth: 200,
-                    imageAlt: "Peixe colorido"
-                    })
-                  });
+                    $(document).ready(function() {
+                    Swal.fire({
+                        title: "Seja bem vindo!",
+                        confirmButtonColor: "#39393b",
+                        color: "#201b2c",
+                        
+                        imageUrl: "img/zebra correndo.gif",
+                        imageWidth: 200,
+                        imageAlt: "Zebra correndo",
+                        
+                        background: "#100d16",
+                    });
+                });
                 </script>';
             }
             $this -> conn = null;
@@ -148,7 +152,22 @@ class Produto {
             $sql = $this -> conn -> prepare("delete from produto where id = ?"); // informei o ? (parametro)
             @$sql ->  bindParam(1, $this -> getId(), PDO::PARAM_STR); // inclui esta linha para definir o parametro
             if($sql -> execute() == 1) {
-                return "Excluido com sucesso! ";
+                echo '
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                    Swal.fire({
+                        title: "Excluido com sucesso!",
+                        confirmButtonColor: "#39393b",
+                        color: "#201b2c",
+                        
+                        imageUrl: "img/zebra correndo.gif",
+                        imageWidth: 200,
+                        imageAlt: "Zebra correndo",
+                        
+                        background: "#100d16",
+                    });
+                });
+                </script>';
             } 
             else {
                 return "Erro na exclusão! "; 

@@ -22,7 +22,7 @@
             </div>
             <div class="row">
                 <label for="">Estoque</label>
-                <input name="txtestoq" type="number" size="10" placeholder="0" required>
+                <input name="txtestoq" type="number" size="40" placeholder="0" required>
             </div>
             <div class="row">
                 <button name="btnEnviar" type="submit">Cadastrar</button>
@@ -30,17 +30,19 @@
             </div>
         </form>
     </section>
-        <?php
-        extract($_POST, EXTR_OVERWRITE);
-        if(isset($btnEnviar))
-        {
-            include_once 'Produto.php';
-            $pro = new Produto();
-            $pro -> setNome($txtnome);
-            $pro -> setEstoque($txtestoq);
-            echo $pro -> salvar();
-        }
-        ?>
+    
+    <?php
+    extract($_POST, EXTR_OVERWRITE);
+    if(isset($btnEnviar))
+    {
+        include_once 'Produto.php';
+        $pro = new Produto();
+        $pro -> setNome($txtnome);
+        $pro -> setEstoque($txtestoq);
+        echo $pro -> salvar();
+    }
+    ?>
+
 </body>
 
 </html>
