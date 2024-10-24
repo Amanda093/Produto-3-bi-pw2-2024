@@ -16,12 +16,20 @@ section {
     margin-inline: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+
+    height: fit-content;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    
     outline: solid 2px red;
 }
 body {
+    position:relative;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: column;   
 }
 header {
     /* HEADER */
@@ -71,13 +79,19 @@ ul a:hover::after {
     transform-origin: center;
 }
 /* Fim do Header */
-section {
-    width: 70vw;
-    height: fit-content;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+form {
+    padding-block: 2em;
+    padding-inline: 3em;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+h1, h2{
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 0.25em;
+}
+label {
+    font-weight: 700;
 }
 button {
     padding-inline: 0.1em;
@@ -86,26 +100,27 @@ button {
 
     background-color: var(--gray);
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight:600;
     letter-spacing: 3px;
     color: var(--white);
 
-    border-radius: 5px;
+    border-radius:  0.5rem;
+    padding: 0.4rem 0.75rem;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1rem;
 }
 input, select {
-    background-color: var(--light-light-light-gray);
+    outline: 3px solid var(--gray);
     border: solid 2px var(--purple);
-    border-radius: 0.7em;
+    border-radius:  0.5rem;
     padding: 0.4rem 0.75rem;
-
-    box-shadow: 0px 10px 40px -12px #00ff0052;
-    transition: box-shadow 0.3s, background-color 0.3s;
-    &:hover {
-        background-color: var(--white);
-        box-shadow: 5px 10px 20px -10px #00ff55a9;
-    }
+}
+.row {
+    padding-block: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }

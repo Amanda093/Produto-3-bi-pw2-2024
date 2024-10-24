@@ -22,7 +22,7 @@
                 <input name="txtsenha" type="password" maxlength="3" required>
             </div>
             <div class="row">
-                <button name = "btnEnviar" type="submit">Excluir</button>
+                <button name = "btnEnviar" type="submit">Entrar</button>
                 <button name = "btnLimpar" type="reset">Limpar</button>
             </div>
         </form>
@@ -41,10 +41,26 @@
         $existe = false;
         foreach($pro_bd as $pro_mostrar) 
         {
-            $existe = true;
-            ?>
-            <br><b><?php echo "Bem-Vindo! Usuario: " . $pro_mostrar[1]; ?></b><br><br>
-            <center><button name="btnEntrar" type="submit"><a href="menu.html">Entrar</a></button></center>
+            $existe = true; ?>
+            <script type="text/javascript">
+                    $(document).ready(function() {
+                    Swal.fire({
+                        title: "Seja bem vindo!",
+                        confirmButtonColor: "#39393b",
+                        color: "#201b2c",
+                        
+                        imageUrl: "img/zebra correndo.gif",
+                        imageWidth: 200,
+                        imageAlt: "Zebra correndo",
+                        
+                        background: "#100d16",
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                        window.location.href = 'menu.html'; // Redireciona ao clicar no botão de confirmação
+                    }
+                    });
+                });
+            </script>
             <?php
         }
         if($existe==false) {
